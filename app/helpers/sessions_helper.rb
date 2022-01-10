@@ -6,11 +6,5 @@ module SessionsHelper
   def logged_in?
     !!current_user
   end
-  
-  def current_user?
-    if !current_user.tasks.find_by(user_id: @task.user_id)
-      redirect_to root_url
-    end
-  end
 
 end
